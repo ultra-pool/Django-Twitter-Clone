@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: urllib3
+    versions:
+    - 1.26.3
+  - dependency-name: virtualenv
+    versions:
+    - 20.4.0
+    - 20.4.2
+    - 20.4.3
+  - dependency-name: django
+    versions:
+    - 3.1.5
+    - 3.1.6
+  - dependency-name: mysql-connector-python
+    versions:
+    - 8.0.23
+  - dependency-name: pyinstaller-hooks-contrib
+    versions:
+    - "2020.11"
